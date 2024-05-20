@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.service.NinjasServic;
 import org.example.service.OnePieceService;
 //Encuentra los piratas con una recompensa superior a 100.000.000 berries Muestra sus nombre
 //apodos recompensas , si el rango esta vacio muestra "sin rango"
@@ -22,5 +23,8 @@ public class Main {
       //  System.out.println(onePieceService.getTripulacionByName("Kuja Pirates"));
 
         onePieceService.getPiratasRecompensa(10000000);
+
+        NinjasServic ninjasServic = new NinjasServic();
+        ninjasServic.jonin();
     }
 }

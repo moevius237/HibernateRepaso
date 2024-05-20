@@ -50,7 +50,7 @@ public class PirataDaoJpa implements PirataDao{
             CriteriaQuery<Miembro> criteria =builder.createQuery(Miembro.class);
             Root<Miembro> root = criteria.from(Miembro.class);
             Join<Miembro,Pirata> join = root.join("pirata");
-            criteria.where(builder.gt(join.get("recompensa"),recompensa));
+          //  criteria.where(builder.gt(join.get("recompensa"),recompensa));
             return session.createQuery(criteria).getResultList();
         }
     }
@@ -59,7 +59,7 @@ public class PirataDaoJpa implements PirataDao{
     public String findBounty(List<Pirata> piratas) {
         return "";
     }
-
+/*
 
     @Override
     public void newCapitan(Pirata pirata) {
@@ -70,6 +70,8 @@ public class PirataDaoJpa implements PirataDao{
             Join<Miembro,Pirata> join = root.join("pirata");
         }
     }
+
+ */
 
     @Override
     public Pirata findPirata() {
