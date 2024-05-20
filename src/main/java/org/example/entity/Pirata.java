@@ -10,12 +10,23 @@ public class Pirata {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Override
+    public String toString() {
+        return "Pirata{" +
+                "id=" + id +
+                ", apodo='" + apodo + '\'' +
+                ", recompensa=" + recompensa +
+                '}';
+    }
+
     @Column(name = "apodo", nullable = false ,unique = true)
     private String apodo;
 
     @Column(name = "recompensa",nullable = false)
     private double recompensa;
 
+    @OneToOne
+    private Tripulacion tripulacion;
     public String getApodo() {
         return apodo;
     }

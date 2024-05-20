@@ -19,6 +19,8 @@ public class Main {
          */
 
         OnePieceService onePieceService = new OnePieceService();
-        System.out.println(onePieceService.getTripulacionByName("Kuja Pirates"));
+      //  System.out.println(onePieceService.getTripulacionByName("Kuja Pirates"));
+
+        onePieceService.getPiratasRecompensa(10000000);
     }
 }

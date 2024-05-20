@@ -8,6 +8,14 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
 
-        <mapping class=""></mapping>
+        <mapping class="org.example.entity.FrutaDelDiablo"/>
+        <mapping class="org.example.entity.Miembro"/>
+        <mapping class="org.example.entity.Pirata"/>
+        <mapping class="org.example.entity.Tripulacion"/>
+        <mapping class="org.example.entity.Aldea"/>
+        <mapping class="org.example.entity.Jutsu"/>
+        <mapping class="org.example.entity.Mision"/>
+        <mapping class="org.example.entity.Ninja"/>
+        <mapping class="org.example.entity.TecnicaSecreta"/>
     </session-factory>
 </hibernate-configuration>
