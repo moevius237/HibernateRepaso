@@ -27,6 +27,7 @@ public class Pirata {
 
     @OneToOne
     private Tripulacion tripulacion;
+
     public String getApodo() {
         return apodo;
     }

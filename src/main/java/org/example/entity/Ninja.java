@@ -10,14 +10,26 @@ public class Ninja {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "nombre")
+    @Override
+    public String toString() {
+        return "Ninja{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", chakra=" + chakra +
+                ", aldea=" + aldea +
+                ", mision=" + mision +
+                ", rango='" + rango + '\'' +
+                '}';
+    }
+
+    @Column(name = "nombre",nullable = false,unique = true)
     private String nombre;
 
     public String getNombre() {
         return nombre;
     }
 
-    @Column(name = "chakra")
+    @Column(name = "chakra",nullable = false)
     private Double chakra;
 
     @ManyToOne
@@ -28,7 +40,7 @@ public class Ninja {
     @JoinColumn(name = "mision_id")
     private Mision mision;
 
-    @Column(name = "rango")
+    @Column(name = "rango",nullable = false)
     private String rango;
 
     public Mision getMision() {

@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.entity.Ninja;
 import org.example.service.NinjasServic;
 import org.example.service.OnePieceService;
 //Encuentra los piratas con una recompensa superior a 100.000.000 berries Muestra sus nombre
@@ -25,6 +26,13 @@ public class Main {
         onePieceService.getPiratasRecompensa(10000000);
 
         NinjasServic ninjasServic = new NinjasServic();
-        ninjasServic.jonin();
+        ninjasServic.jonin("jonin",9999);
+
+        Ninja ninja = ninjasServic.findNinja("Sasuke Uchiha");
+        Ninja menor = ninjasServic.finfNinjaLeastChakra();
+        ninjasServic.updateMision(ninja,menor);
+        ninjasServic.ActuazliarNinja(ninja);
+
+
     }
 }

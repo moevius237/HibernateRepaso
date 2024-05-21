@@ -13,6 +13,14 @@ public class Aldea {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Override
+    public String toString() {
+        return "Aldea{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
+
     @Column(name = "nombre", unique = true, nullable = false)
     private String nombre;
 

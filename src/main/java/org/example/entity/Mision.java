@@ -3,18 +3,28 @@ package org.example.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "mision")
 public class Mision {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Override
+    public String toString() {
+        return "Mision{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", recompensa='" + recompensa + '\'' +
+                ", rango='" + rango + '\'' +
+                '}';
+    }
+
     @Column(name = "nombre",nullable = false)
     private String nombre;
 
     @Column(name = "recompensa",nullable = false)
-    private String recompensa;
+    private double recompensa;
 
     @Column(name = "rango")
     private String rango;
@@ -27,11 +37,11 @@ public class Mision {
         this.rango = rango;
     }
 
-    public String getRecompensa() {
+    public double getRecompensa() {
         return recompensa;
     }
 
-    public void setRecompensa(String recompensa) {
+    public void setRecompensa(double recompensa) {
         this.recompensa = recompensa;
     }
 

@@ -14,7 +14,7 @@ public class TecnicaSecreta {
     private String nombre;
 
     @ManyToOne
-    @JoinColumn(name = "ninja_id",nullable = false,unique = true)
+    @JoinColumn(name = "ninja_id",nullable = false)
     private Ninja ninja;
 
     public Ninja getNinja() {
